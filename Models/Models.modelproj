@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{00000000-0000-0000-0000-000000000000}</ProjectGuid>
+    <ProjectGuid>{d5a91a51-048c-4f7c-95a7-617e0bac3c5c}</ProjectGuid>
     <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
     <Name>Models</Name>
     <RootNamespace>Models</RootNamespace>
@@ -26,5 +26,18 @@
     <Content Include="ModelDefinition\Models.uml">
       <SubType>Content</SubType>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Validate Include="AppLayers.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="AppLayers.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>AppLayers.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="AppLayers.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>AppLayers.layerdiagram</DependentUpon>
+    </Validate>
   </ItemGroup>
 </Project>

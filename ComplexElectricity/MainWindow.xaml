@@ -7,7 +7,11 @@
         mc:Ignorable="d"
         Title="Расчет системы электроснабжения" Height="350" Width="525">
     <Grid>
-        <Canvas Margin="0,0,100,0" Name="Canvas"/>
-        <StackPanel />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
+        <Canvas Grid.Column="0" Name="Canvas"/>
+        <StackPanel Grid.Column="1" Background="#FFE0E0E0" />
     </Grid>
 </Window>

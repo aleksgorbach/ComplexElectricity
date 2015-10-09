@@ -1,10 +1,12 @@
 ﻿// Created 08.10.2015 
-// Modified by Gorbach Alex 08.10.2015 at 16:43
+// Modified by Gorbach Alex 09.10.2015 at 15:24
 
 namespace ComplexElectricity {
     #region References
 
-    using Microsoft.Practices.Unity;
+    using System.Windows;
+    using Dependencies.Initializing.Bootstrappers;
+    using Microsoft.Practices.ServiceLocation;
 
     #endregion
 
@@ -12,8 +14,11 @@ namespace ComplexElectricity {
     /// Логика взаимодействия для App.xaml
     /// </summary>
     public partial class App {
-        public App() {
-            var container = new UnityContainer();
+        protected override void OnStartup(StartupEventArgs e) {
+            base.OnStartup(e);
+            Bootstrapper.Initialize();
+            var window = ServiceLocator.Current.GetInstance<MainWindow>();
+            window.Show();
         }
     }
 }

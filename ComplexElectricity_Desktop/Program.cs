@@ -5,6 +5,7 @@
 
 using System;
 using System.Windows.Forms;
+using ComplexElectricity_Desktop.Views.Main;
 
 #endregion
 
@@ -13,7 +14,6 @@ namespace ComplexElectricity_Desktop {
 
     using App.Dependencies;
     using App.Dependencies.Modules;
-    using Views;
 
     #endregion
 

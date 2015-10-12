@@ -61,15 +61,12 @@
     <Compile Include="App\Dependencies\CompositionRoot.cs" />
     <Compile Include="App\Dependencies\ICompositionRoot.cs" />
     <Compile Include="App\Dependencies\Modules\AppModule.cs" />
-    <Compile Include="Controllers\Controller.cs" />
-    <Compile Include="Controllers\IController.cs" />
-    <Compile Include="Models\IModel.cs" />
-    <Compile Include="Models\MainViewModel.cs" />
     <Compile Include="Views\IView.cs" />
-    <Compile Include="Views\MainView.cs">
+    <Compile Include="Views\Main\IMainView.cs" />
+    <Compile Include="Views\Main\MainView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\MainView.Designer.cs">
+    <Compile Include="Views\Main\MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />

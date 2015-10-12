@@ -21,11 +21,7 @@ namespace ComplexElectricity.Dependencies.Initializing.Bootstrappers {
         }
 
         private static void RegisterDependencies(IKernel kernel) {
-            kernel.Bind<IServiceLocator>().ToConstant(ServiceLocator.Current);
-            kernel.Bind<IFactory<IApplication>>().To<Application.Factory>();
-            kernel.Bind<IFactory<ICanvas>>().To<DrawingCanvas.Factory>();
-            kernel.Bind<ICanvas>().To<DrawingCanvas>();
-            kernel.Bind<IApplication>().To<Application>();
+
         }
     }
 }

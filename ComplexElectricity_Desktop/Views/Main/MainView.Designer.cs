@@ -1,4 +1,4 @@
-﻿namespace ComplexElectricity_Desktop.Views {
+﻿namespace ComplexElectricity_Desktop.Views.Main {
     partial class MainView {
         /// <summary>
         /// Обязательная переменная конструктора.

@@ -1,7 +1,7 @@
 ﻿// Created 12.10.2015 
-// Modified by Gorbach Alex 12.10.2015 at 13:55
+// Modified by Gorbach Alex 12.10.2015 at 15:40
 
 namespace ComplexElectricity_Desktop.Models {
-    internal class MainViewModel : IModel {
+    public class MainViewModel : IModel {
     }
 }

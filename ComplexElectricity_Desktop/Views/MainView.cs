@@ -1,5 +1,5 @@
 ﻿// Created 12.10.2015 
-// Modified by Gorbach Alex 12.10.2015 at 13:56
+// Modified by Gorbach Alex 12.10.2015 at 15:40
 
 namespace ComplexElectricity_Desktop.Views {
     #region References
@@ -10,7 +10,10 @@ namespace ComplexElectricity_Desktop.Views {
     #endregion
 
     public partial class MainView : Form, IView<MainViewModel> {
-        public MainView() {
+        private readonly MainViewModel _model;
+
+        public MainView(MainViewModel model) {
+            _model = model;
             InitializeComponent();
         }
     }

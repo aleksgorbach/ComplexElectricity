@@ -1,5 +1,5 @@
 ﻿// Created 12.10.2015 
-// Modified by Gorbach Alex 12.10.2015 at 14:29
+// Modified by Gorbach Alex 12.10.2015 at 15:35
 
 #region References
 
@@ -11,6 +11,8 @@ using System.Windows.Forms;
 namespace ComplexElectricity_Desktop {
     #region References
 
+    using App.Dependencies;
+    using App.Dependencies.Modules;
     using Views;
 
     #endregion
@@ -23,7 +25,8 @@ namespace ComplexElectricity_Desktop {
         private static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainView());
+            CompositionRoot.Register(new CompositionRoot(new AppModule()));
+            Application.Run(CompositionRoot.Current.Resolve<MainView>());
         }
     }
 }

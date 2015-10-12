@@ -1,12 +1,10 @@
 ﻿// Created 08.10.2015 
-// Modified by Gorbach Alex 09.10.2015 at 15:20
+// Modified by Gorbach Alex 12.10.2015 at 11:05
 
 namespace ComplexElectricity {
     #region References
 
-    using Application;
-    using UI.Drawings.Canvas;
-    using Utils.Factories;
+    using ViewModels.ElectricElements;
 
     #endregion
 
@@ -14,15 +12,11 @@ namespace ComplexElectricity {
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
     public partial class MainWindow {
-        private readonly IApplication _application;
+        public readonly IElectricElementsViewModel _model;
 
-        public MainWindow(IFactory<IApplication> appFactory, IFactory<ICanvas> canvasFactory) {
+        public MainWindow(IElectricElementsViewModel model) {
             InitializeComponent();
-            var canvas = canvasFactory.Build();
-            canvas.Init(Canvas);
-
-            _application = appFactory.Build();
-            _application.Init(canvas);
+            _model = model;
         }
     }
 }

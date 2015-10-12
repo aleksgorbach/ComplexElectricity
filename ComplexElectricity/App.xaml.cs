@@ -1,5 +1,5 @@
 ﻿// Created 08.10.2015 
-// Modified by Gorbach Alex 09.10.2015 at 15:24
+// Modified by Gorbach Alex 12.10.2015 at 9:31
 
 namespace ComplexElectricity {
     #region References
@@ -15,10 +15,10 @@ namespace ComplexElectricity {
     /// </summary>
     public partial class App {
         protected override void OnStartup(StartupEventArgs e) {
-            base.OnStartup(e);
             Bootstrapper.Initialize();
             var window = ServiceLocator.Current.GetInstance<MainWindow>();
             window.Show();
+            base.OnStartup(e);
         }
     }
 }

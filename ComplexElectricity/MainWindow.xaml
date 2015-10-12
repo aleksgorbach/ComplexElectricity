@@ -11,7 +11,7 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="100" />
         </Grid.ColumnDefinitions>
-        <Canvas Grid.Column="0" Name="Canvas"/>
+        <Canvas Grid.Column="0" Name="Canvas" DataContext="{Binding Source=_model}"/>
         <StackPanel Grid.Column="1" Background="#FFE0E0E0" />
     </Grid>
 </Window>

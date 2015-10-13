@@ -1,23 +1,32 @@
-﻿// Created 13.10.2015 
-// Modified by Gorbach Alex 13.10.2015 at 15:00
+﻿// Created 13.10.2015
+// Modified by Александр 13.10.2015 at 21:25
+
+#region References
+
+#endregion
 
 namespace PresentationLayer.Presenters.Main {
     #region References
 
     using ComplexElectricityCore.Models.ElectricSystems;
     using Models.Canvas.Context;
-    using Utils;
+    using Models.Drawables.Electric;
+    using Models.Input;
     using Views.Main;
 
     #endregion
 
+    #region References
+
+    #endregion
+
     internal class MainPresenter : IMainPresenter {
+        private readonly IVisualElectricSystem _electricSystem;
         private readonly IMainView _view;
-        private readonly IElectricSystem _electricSystem;
 
         public MainPresenter(IMainView view, IElectricSystem electricSystem) {
             _view = view;
-            _electricSystem = electricSystem;
+            _electricSystem = new VisualElectricSystem(electricSystem);
             _view.InputDetected += OnCanvasInput;
         }
 
@@ -26,16 +35,17 @@ namespace PresentationLayer.Presenters.Main {
         }
 
         private void OnCanvasInput(DrawingContextEventArgs eventArgs) {
-            HandleInput(eventArgs.Event, eventArgs.Position);
+            HandleInput(eventArgs.Event, eventArgs.InputArgs);
         }
 
-        private void HandleInput(InputEvent eventType, Vector2 position) {
+        private void HandleInput(InputEvent eventType, IInput input) {
             //todo обработать - добавить или изменить фигуры
+            _electricSystem.HandleInput(eventType, input);
             Repaint();
         }
 
         private void Repaint() {
-            _view.Repaint(_electricSystem.VisualElements);
+            _view.Repaint(_electricSystem.Drawables);
         }
     }
 }

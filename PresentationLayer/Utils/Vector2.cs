@@ -2,7 +2,7 @@
 // Modified by Gorbach Alex 13.10.2015 at 14:32
 
 namespace PresentationLayer.Utils {
-    public class Vector2 {
+    public class Vector2 : IVector2 {
         public Vector2(double x, double y) {
             X = x;
             Y = y;

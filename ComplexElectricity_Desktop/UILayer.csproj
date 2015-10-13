@@ -62,6 +62,7 @@
     <Compile Include="App\Dependencies\ICompositionRoot.cs" />
     <Compile Include="App\Dependencies\Modules\AppModule.cs" />
     <Compile Include="Graphics\Context\DrawingContext.cs" />
+    <Compile Include="Input\MouseInput.cs" />
     <Compile Include="Views\MainView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,10 +99,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ComplexElectricityCore\CoreLayer.csproj">
+      <Project>{7eeebe9b-a277-40fc-90ce-02226098b744}</Project>
+      <Name>CoreLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PresentationLayer\PresentationLayer.csproj">
       <Project>{2d62f6b3-c668-4bf4-bf67-4d931d5fb4db}</Project>
       <Name>PresentationLayer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

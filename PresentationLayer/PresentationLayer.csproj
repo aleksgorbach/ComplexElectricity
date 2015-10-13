@@ -50,11 +50,16 @@
     <Compile Include="Models\Canvas\Context\Items\IDrawableCollection.cs" />
     <Compile Include="Models\Canvas\ICanvas.cs" />
     <Compile Include="Models\Canvas\Context\IDrawingContext.cs" />
+    <Compile Include="Models\Drawables\Electric\IVisualElectricSystem.cs" />
+    <Compile Include="Models\Drawables\Electric\VisualElectricSystem.cs" />
     <Compile Include="Models\Drawables\IDrawable.cs" />
+    <Compile Include="Models\Input\IInput.cs" />
+    <Compile Include="Models\Input\IMouseInput.cs" />
     <Compile Include="Presenters\IPresenter.cs" />
     <Compile Include="Presenters\Main\IMainPresenter.cs" />
     <Compile Include="Presenters\Main\MainPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\IVector2.cs" />
     <Compile Include="Utils\Vector2.cs" />
     <Compile Include="Views\Main\IMainView.cs" />
     <Compile Include="Views\IView.cs" />

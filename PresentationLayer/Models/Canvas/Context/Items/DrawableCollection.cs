@@ -1,5 +1,5 @@
-﻿// Created 13.10.2015 
-// Modified by Gorbach Alex 13.10.2015 at 14:44
+﻿// Created 13.10.2015
+// Modified by Александр 13.10.2015 at 21:28
 
 namespace PresentationLayer.Models.Canvas.Context.Items {
     #region References
@@ -10,6 +10,12 @@ namespace PresentationLayer.Models.Canvas.Context.Items {
     #endregion
 
     internal class DrawableCollection : IDrawableCollection {
-        public IEnumerable<IDrawable> Items { get; }
+        private readonly IList<IDrawable> _items;
+
+        public DrawableCollection() {
+            _items = new List<IDrawable>();
+        }
+
+        public IEnumerable<IDrawable> Items => _items;
     }
 }

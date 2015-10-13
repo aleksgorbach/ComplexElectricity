@@ -1,28 +1,28 @@
-﻿// Created 13.10.2015 
-// Modified by Gorbach Alex 13.10.2015 at 14:32
+﻿// Created 13.10.2015
+// Modified by Александр 13.10.2015 at 21:11
 
 namespace PresentationLayer.Models.Canvas.Context {
     #region References
 
     using System;
-    using Utils;
+    using Input;
 
     #endregion
 
     public enum InputEvent {
         Press,
         Release,
-        Move
+        Move,
+        Click
     }
 
     public class DrawingContextEventArgs : EventArgs {
-        public DrawingContextEventArgs(InputEvent eventType, Vector2 position)
-            : base() {
+        public DrawingContextEventArgs(InputEvent eventType, IInput inputArgs) {
             Event = eventType;
-            Position = position;
+            InputArgs = inputArgs;
         }
 
         public InputEvent Event { get; }
-        public Vector2 Position { get; }
+        public IInput InputArgs { get; }
     }
 }

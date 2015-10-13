@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\Dependencies\CoreModule.cs" />
+    <Compile Include="Models\ElectricSystems\ElectricSystem.cs" />
+    <Compile Include="Models\ElectricSystems\Elements\ElectricElement.cs" />
+    <Compile Include="Models\ElectricSystems\Elements\IElectricElement.cs" />
+    <Compile Include="Models\ElectricSystems\Elements\Visual\IVisualElement.cs" />
+    <Compile Include="Models\ElectricSystems\IElectricSystem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

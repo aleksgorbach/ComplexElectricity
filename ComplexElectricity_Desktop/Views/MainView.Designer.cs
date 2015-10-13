@@ -1,4 +1,4 @@
-﻿namespace ComplexElectricity_Desktop.Views.Main {
+﻿namespace ElectricityDesktop.Views {
     partial class MainView {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -23,12 +23,31 @@
         /// содержимое этого метода с помощью редактора кода.
         /// </summary>
         private void InitializeComponent() {
-            this.components = new System.ComponentModel.Container();
+            this._canvasPanel = new System.Windows.Forms.Panel();
+            this.SuspendLayout();
+            // 
+            // _canvasPanel
+            // 
+            this._canvasPanel.Location = new System.Drawing.Point(12, 12);
+            this._canvasPanel.Name = "_canvasPanel";
+            this._canvasPanel.Size = new System.Drawing.Size(260, 237);
+            this._canvasPanel.TabIndex = 0;
+            // 
+            // MainView
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this._canvasPanel);
+            this.Name = "MainView";
             this.Text = "MainView";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel _canvasPanel;
     }
 }
 

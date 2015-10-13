@@ -1,7 +1,7 @@
 ﻿// Created 12.10.2015 
 // Modified by Gorbach Alex 12.10.2015 at 15:35
 
-namespace ComplexElectricity_Desktop.App.Dependencies {
+namespace ElectricityDesktop.App.Dependencies {
     #region References
 
     using Ninject;

@@ -1,12 +1,16 @@
 ﻿// Created 12.10.2015 
-// Modified by Gorbach Alex 12.10.2015 at 15:39
+// Modified by Gorbach Alex 13.10.2015 at 12:36
 
-using ComplexElectricity_Desktop.Views.Main;
+#region References
 
-namespace ComplexElectricity_Desktop.App.Dependencies.Modules {
+#endregion
+
+namespace ElectricityDesktop.App.Dependencies.Modules {
     #region References
 
+    using ElectricityDesktop.Views;
     using Ninject.Modules;
+    using PresentationLayer.Views.Main;
 
     #endregion
 

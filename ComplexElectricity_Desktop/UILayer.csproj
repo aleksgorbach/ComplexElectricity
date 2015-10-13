@@ -7,7 +7,7 @@
     <ProjectGuid>{53D0CD23-DE01-47A2-90D9-CAD137B2A3DF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ComplexElectricity_Desktop</RootNamespace>
+    <RootNamespace>ElectricityDesktop</RootNamespace>
     <AssemblyName>ComplexElectricity_Desktop</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -61,12 +61,11 @@
     <Compile Include="App\Dependencies\CompositionRoot.cs" />
     <Compile Include="App\Dependencies\ICompositionRoot.cs" />
     <Compile Include="App\Dependencies\Modules\AppModule.cs" />
-    <Compile Include="Views\IView.cs" />
-    <Compile Include="Views\Main\IMainView.cs" />
-    <Compile Include="Views\Main\MainView.cs">
+    <Compile Include="Graphics\Context\DrawingContext.cs" />
+    <Compile Include="Views\MainView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Main\MainView.Designer.cs">
+    <Compile Include="Views\MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -79,7 +78,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -94,7 +97,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\PresentationLayer\PresentationLayer.csproj">
+      <Project>{2d62f6b3-c668-4bf4-bf67-4d931d5fb4db}</Project>
+      <Name>PresentationLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

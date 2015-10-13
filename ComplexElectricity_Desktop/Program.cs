@@ -1,19 +1,19 @@
 ﻿// Created 12.10.2015 
-// Modified by Gorbach Alex 12.10.2015 at 15:35
+// Modified by Gorbach Alex 13.10.2015 at 12:36
 
 #region References
 
-using System;
-using System.Windows.Forms;
-using ComplexElectricity_Desktop.Views.Main;
-
 #endregion
 
-namespace ComplexElectricity_Desktop {
+namespace ElectricityDesktop {
     #region References
 
-    using App.Dependencies;
-    using App.Dependencies.Modules;
+    using System;
+    using System.Windows.Forms;
+    using ElectricityDesktop.App.Dependencies;
+    using ElectricityDesktop.App.Dependencies.Modules;
+    using PresentationLayer.App.Dependencies;
+    using PresentationLayer.Presenters.Main;
 
     #endregion
 
@@ -25,8 +25,9 @@ namespace ComplexElectricity_Desktop {
         private static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            CompositionRoot.Register(new CompositionRoot(new AppModule()));
-            Application.Run(CompositionRoot.Current.Resolve<MainView>());
+            CompositionRoot.Register(new CompositionRoot(new AppModule(), new PresentationModule()));
+            var presenter = CompositionRoot.Current.Resolve<IMainPresenter>();
+            presenter.Run();
         }
     }
 }
